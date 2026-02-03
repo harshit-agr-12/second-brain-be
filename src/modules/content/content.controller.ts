@@ -105,11 +105,11 @@ export async function getMetaDataController(req:any , res:any){
 
   try{
     const urlObject = new URL(link);
-    if(urlObject.hostname === 'www.youtube.com' || urlObject.hostname === 'youtube.com' || urlObject.hostname === 'youtu.be'){
-      const resObj = await ytMetaData(link);
-      res.status(200).json(resObj);
-      return;
-    }
+    // if(urlObject.hostname === 'www.youtube.com' || urlObject.hostname === 'youtube.com' || urlObject.hostname === 'youtu.be'){
+    //   const resObj = await ytMetaData(link);
+    //   res.status(200).json(resObj);
+    //   return;
+    // }
     const response = await webMetaData(link);
 
     if(!response || !response.title){
