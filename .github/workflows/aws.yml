@@ -33,7 +33,8 @@ jobs:
             git reset --hard origin/main          # 🔧 Change branch if not main
 
             echo "📥 Installing dependencies..."
-            npm ci --omit=dev
+            pnpm install
+            pnpm build
 
             echo "♻️ Restarting PM2 process..."
             pm2 restart backend                   # 🔧 CHANGE to your PM2 app name
