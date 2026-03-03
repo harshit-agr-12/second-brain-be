@@ -56,7 +56,29 @@ Make sure you have installed:
 ```bash
 git clone https://github.com/harshit-agr-12/second-brain-be.git
 cd second-brain-be
+```
+---
+## 📁 Project Structure
+
+src/
+│── controllers/      # Route handlers
+│── routes/           # Express route definitions
+│── middleware/       # Auth & error middleware
+│── models/           # Database schemas/models
+│── services/         # Business logic layer
+│── utils/            # Helper functions
+│── index.ts          # Entry point
 
 
+## 🔐 Environment Variables
 
+Create a `.env` file and add:
 
+PORT=3000
+DATABASE_URL=your_database_url  
+JWT_SECRET=your_super_secret_key  
+GEMINI_API_KEY=your_gemini_API_KEY
+PINECONE_INDEX
+PINECONE_APIKEY
+
+⚠️ Never commit your `.env` file.
